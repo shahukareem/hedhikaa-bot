@@ -1,0 +1,8 @@
+*.pyc
+.settings/
+doc
+.idea/*
+.vscode/*
+serverstuff.txt
+/env/
+telebot
