@@ -18,6 +18,7 @@ token = getenv("bot_token")
 url = token = getenv("bot_url")
 bot = telegram.Bot(token=token)
 model = load_learner(path, 'model/hedhika-classifier.pkl')
+port = int(os.environ.get("PORT", 8443))
 
 
 def start(update, context):
@@ -37,7 +38,7 @@ def main():
     updater.start_webhook(listen="0.0.0.0",
                           port=int(port),
                           url_path=token)
-    updater.bot.setWebhook('https://hedhikaa-bot.herokuapp.com/' + token)
+    updater.bot.setWebhook("https://hedhikaa-bot.herokuapp.com/" + token)
     updater.idle()
 
 
@@ -60,7 +61,6 @@ def predict(update, context):
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
     main()
 
 
