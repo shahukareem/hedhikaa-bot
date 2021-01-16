@@ -1,2 +1,1 @@
-web: python main.py
-work: python main.py
+web: python main.py runserver 0.0.0.0:8443
