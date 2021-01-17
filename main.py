@@ -1,6 +1,6 @@
 import logging
 import telegram
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from fastai.vision import *
 from dotenv import load_dotenv
 from os import getenv
@@ -15,10 +15,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 load_dotenv()
 token = getenv("bot_token")
-url = token = getenv("bot_url")
+url = getenv("bot_url")
 bot = telegram.Bot(token=token)
 model = load_learner(path, 'model/hedhika-classifier.pkl')
-port = int(os.environ.get("PORT", 8443))
+port = int(os.environ.get("PORT", 5000))
 
 
 def start(update, context):
