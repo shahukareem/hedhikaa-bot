@@ -66,6 +66,7 @@ def main():
     dp.add_handler(CommandHandler("help", start))
 
     dp.add_handler(MessageHandler(Filters.photo, predict))
+    dp.add_handler(MessageHandler(Filters.text, start))
 
     if is_webhook:
         hook_url = f"{url}{token}"
