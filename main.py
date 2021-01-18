@@ -70,7 +70,7 @@ def main():
     if is_webhook:
         hook_url = f"{url}{token}"
         updater.start_webhook(
-            listen="127.0.0.1",
+            listen="0.0.0.0",
             port=port,
             url_path=token,
             webhook_url=hook_url)
