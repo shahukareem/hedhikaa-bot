@@ -1,4 +1,6 @@
-https://download.pytorch.org/whl/cpu/torch-1.5.0%2Bcpu-cp36-cp36m-linux_x86_64.whl
+-f https://download.pytorch.org/whl/torch_stable.html
 python-telegram-bot
 python-dotenv
 fastai==1.0.61
+torch==1.6.0+cpu
+torchvision==0.7.0+cpu
