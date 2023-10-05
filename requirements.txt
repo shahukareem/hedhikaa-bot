@@ -1,6 +1,6 @@
 -f https://download.pytorch.org/whl/torch_stable.html
 python-telegram-bot
 python-dotenv
-torch==1.6.0+cpu
+torch==1.13.1+cpu
 torchvision==0.7.0+cpu
 fastai==1.0.61
